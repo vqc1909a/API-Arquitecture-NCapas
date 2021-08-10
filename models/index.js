@@ -1,5 +1,5 @@
 module.exports = {
-  UserModel: require("./UserModel"),
-  IdeaModel: require("./IdeaModel"),
-  CommentModel: require("./CommentModel")
+  User: require("./UserModel"),
+  Idea: require("./IdeaModel"),
+  Comment: require("./CommentModel")
 }

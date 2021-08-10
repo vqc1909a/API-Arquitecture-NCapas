@@ -12,7 +12,6 @@ const connectDB = require("./config/db");
 const {ErrorMiddleware, NotFoundMiddleware} = require("./middlewares");
 require("dotenv").config();
 
-
 connectDB()
 .then(() => {
   apiRoutes

@@ -13,7 +13,7 @@ const { HomeController } = require("../controllers");
 const { HomeRoute } = require("../routes");
 
 //Models
-const { UserModel, IdeaModel, CommentModel } = require("../models");
+const { User, Idea, Comment } = require("../models");
 
 
 //Awilix
@@ -33,9 +33,10 @@ container
   .register({ 
     HomeRoute: asFunction(HomeRoute).singleton()
   })
+  //Valor y que este es un objeto
   .register({
-    UserModel: asValue(UserModel),
-    IdeaModel: asValue(IdeaModel),
-    CommentModel: asValue(CommentModel)
+    User: asValue(User),
+    Idea: asValue(Idea),
+    Comment: asValue(Comment)
   })
 module.exports = container;
