@@ -1,7 +1,7 @@
 const {Schema, model} = require("mongoose")
 
 const IdeaSchema = new Schema({
-  idea: {type: String, required: true},
+  idea: {type: String, required: true, unique: true},
   description: {type: String},
   upvotes: [{type: Boolean}],
   downvotes: [{type: Boolean}],

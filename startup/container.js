@@ -15,6 +15,10 @@ const { HomeRoute } = require("../routes");
 //Models
 const { User, Idea, Comment } = require("../models");
 
+//Repositories
+
+const {UserRepository, IdeaRepository, CommentRepository}  = require("../repositories");
+
 
 //Awilix
 const container = createContainer();
@@ -38,5 +42,11 @@ container
     User: asValue(User),
     Idea: asValue(Idea),
     Comment: asValue(Comment)
+  })
+  //Repositories
+  .register({
+    UserRepository: asClass(UserRepository).singleton(),
+    IdeaRepository: asClass(IdeaRepository).singleton(),
+    CommentRepository: asClass(CommentRepository).singleton()
   })
 module.exports = container;
